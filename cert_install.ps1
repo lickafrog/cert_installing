@@ -23,9 +23,9 @@ $params2 = @{
 }
 
 if ((Test-Path $c1) -and (Test-Path $c2)) {
-    Import-Certificate -Filepath $c1 -CertStoreLocation = 'Cert:\CurrentUser\Root'
-    Import-Certificate -Filepath $c2 -CertStoreLocation = 'Cert:\CurrentUser\Root'
-    # Import-Certificate @params1
-    # Import-Certificate @params2
+    #Import-Certificate -Filepath $c1 -CertStoreLocation = 'Cert:\CurrentUser\Root'
+    #Import-Certificate -Filepath $c2 -CertStoreLocation = 'Cert:\CurrentUser\Root'
+    Import-Certificate @params1
+    Import-Certificate @params2
     # Write-Output 'exists'
 }
