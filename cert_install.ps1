@@ -13,7 +13,7 @@ Invoke-WebRequest https://gu-st.ru/content/Other/doc/russian_trusted_sub_ca.cer 
 Start-Sleep -s 5
 
 if ((Test-Path $c1) -and (Test-Path $c2)) {
-    Import-Certificate -Filepath $c1 -CertStoreLocations = 'Cert:\CurrentUser\Root'
-    Import-Certificate -Filepath $c2 -CertStoreLocations = 'Cert:\CurrentUser\Root'
+    Import-Certificate -Filepath $c1 -CertStoreLocation = 'Cert:\CurrentUser\Root'
+    Import-Certificate -Filepath $c2 -CertStoreLocation = 'Cert:\CurrentUser\Root'
     # Write-Output 'exists'
 }
